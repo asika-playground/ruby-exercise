@@ -2,13 +2,15 @@ class Vehicle
 	attr_accessor :color
 	attr_reader :year
 
-	@@inherited = 2
+	@@inherited = 0
 
 	def initialize(year, color, model)
 		@year = year
 		@color = color
 		@model = model
 		@cur_spd = 0
+
+        @@inherited += 1
 	end
 
 	def self.gas_milage
